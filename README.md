@@ -1,16 +1,23 @@
-# flutter_dart_define
+# 🔐 Secure Config in Flutter with --dart-define
 
-A new Flutter project.
+This repo demonstrates how to **safely manage secrets and environment variables** in your Flutter app using Flutter's official `--dart-define` and `--dart-define-from-file` options — no `.env` files needed!
 
-## Getting Started
+## 🚀 Why Use This?
 
-This project is a starting point for a Flutter application.
+Many developers rely on `.env` files or third-party packages to handle sensitive values like API keys or tokens. But here's the thing:
 
-A few resources to get you started if this is your first Flutter project:
+> Secrets stored in `.env` files often end up bundled in your app's assets — making them easy to extract with reverse engineering.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**This repo shows a better way.** A secure, build-time solution — built right into Flutter.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 What's Inside
+
+- `main.dart` — Uses values injected via `--dart-define-from-file`
+- `secrets.json` — Example JSON file passed using `--dart-define-from-file`
+- Clear instructions on how to build and run securely
+
+## 🛠️ How to Use
+
+```bash
+flutter run --dart-define-from-file=secrets.json
+```
